@@ -8,7 +8,6 @@ import SearchBar from './search_bar';
 import Profile from './profile';
 import RepoList from './repo_list';
 
-
 const CLIENT_ID = 'bcb99a1963e7b8075177';
 const CLIENT_SECRET = 'c24e8f36b999f9aa302b5225774d3ab27d456f33';
 const API_URL = 'https://api.github.com/users';
@@ -17,16 +16,14 @@ export default class App extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             term: '',
             user: null,
             repos: null,
         };
-
         this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
         this.submit = this.submit.bind(this);
-        //wait for 300 milisecond then call getProfile.
+        // This will load getProfile after 300 mili second.
         this.getProfile = _.debounce(this.getProfile, 300).bind(this);
     }
 
@@ -44,7 +41,6 @@ export default class App extends Component {
                 </div>
             </div>
         );
-
     }
 
     handleSearchTermChange(event) {
@@ -58,9 +54,10 @@ export default class App extends Component {
 
 	getProfile() {
         const username = this.state.term;
+        // get profile 
         const profile_url = `${API_URL}/${username}?client_id=${CLIENT_ID}&&client_secret=${CLIENT_SECRET}`;
+        // get repos
         const repos_url = `${API_URL}/${username}/repos?client_id=${CLIENT_ID}&&client_secret=${CLIENT_SECRET}`
-
 		axios.get(profile_url)
 			.then(userResponse => {
                 axios.get(repos_url)
@@ -70,7 +67,7 @@ export default class App extends Component {
                 this.setState({user: userResponse.data});
 			})
 			.catch(err => {
-				console.log(`umm!!!! ${this.state.term}\n` + err);
+				console.log(`Nooooo!!!! ${this.state.term}\n` + err);
 			});
 	}
 
