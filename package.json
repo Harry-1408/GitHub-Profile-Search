@@ -1,7 +1,7 @@
 {
   "name": "GithubSearchApp",
   "version": "1.0.0",
-  "description": "Sample Github search app to demonstrate use of React js and github api",
+  "description": "Sample Github search app to demonstrate use of React js and GitHub API",
   "main": "index.js",
   "repository": "",
   "scripts": {
@@ -14,7 +14,8 @@
     "react",
     "react-environment-setup"
   ],
-  "author": "Harsh Patel (http://harshpate.cf)",
+  "author": "Harsh Patel (https://harshpatel.cf)",
+  "license": "ISC",
   "dependencies": {
     "axios": "^0.14.0",
     "lodash": "^4.16.2",
@@ -29,9 +30,5 @@
     "babel-preset-react": "^6.11.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
-  },
-  "scripts": {
-  "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors",
-  "start": "node src/index.js"
-}
+  }
 }
