@@ -2,7 +2,6 @@ import React from 'react';
 import RepoItem from './repo_item';
 
 const RepoList = ({repos}) => {
-
     if(!repos) {
         return (<div />);
     }
