@@ -9,8 +9,8 @@ import Profile from './profile';
 import RepoList from './repo_list';
 
 
-const CLIENT_ID = 'fc62f4d721c91d780811';
-const CLIENT_SECRET = '73ea5bdec2ab1807464ae5e473380c68740823e6';
+const CLIENT_ID = 'bcb99a1963e7b8075177';
+const CLIENT_SECRET = 'c24e8f36b999f9aa302b5225774d3ab27d456f33';
 const API_URL = 'https://api.github.com/users';
 
 export default class App extends Component {
