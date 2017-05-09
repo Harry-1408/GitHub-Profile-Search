@@ -7,6 +7,7 @@ const Profile = ({user}) => {
     if(!user) {
         return (
             <div className="col-md-8 col-md-offset-2">
+                <h1>Type the username to show profile</h1>
             </div>
         );
     }
@@ -32,8 +33,8 @@ const Profile = ({user}) => {
                             <ul className="list-group">
                                 <li className="list-group-item"><strong>Username: </strong>{user.name}</li>
                                 <li className="list-group-item"><strong>Location: </strong>{user.location}</li>
-                                <li className="list-group-item"><strong>Email: </strong>{user.email}</li>
                                 <li className="list-group-item"><strong>Website: </strong>{user.blog}</li>
+                                <li className="list-group-item"><strong>Member Since: </strong>{user.created_at}</li>
                             </ul>
                         </div>
                     </div>
